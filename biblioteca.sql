@@ -1,5 +1,5 @@
--- Criacao das tabelas
-
+CREATE database biblioteca_pessoal_1S2026;
+USE biblioteca_pessoal_1S2026;
 CREATE TABLE Usuario (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255),

@@ -9,7 +9,6 @@ CREATE TABLE Usuario (
     data_cadastro DATE DEFAULT(CURRENT_DATE) NOT NULL,
 	data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-describe Usuario;
 CREATE TABLE Autor(
 id_autor INT PRIMARY KEY auto_increment,
 nome varchar(255) NOT NULL UNIQUE,
@@ -28,14 +27,12 @@ pais varchar(64),
 data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-describe Editora;
 CREATE TABLE Categoria(
 id_categoria  int PRIMARY KEY AUTO_INCREMENT,
 nome varchar(128) NOT NULL unique,
 descricao TEXT,
 data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-
 );
 CREATE TABLE Livro (
 	id_livro INT auto_increment PRIMARY KEY,
@@ -48,6 +45,7 @@ CREATE TABLE Livro (
     autor VARCHAR(128),
     editora VARCHAR(128),
     categoria VARCHAR (128),
+    ano_publicacao YEAR,
 	lido BOOLEAN,
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -65,12 +63,7 @@ CREATE TABLE Livro (
 	REFERENCES categoria(id_categoria)
 	ON DELETE RESTRICT
 );
-describe Livro;
 show tables;
-
-show tables;
-
-
 
 
 
